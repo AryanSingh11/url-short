@@ -12,6 +12,7 @@ function BrandBlocks() {
             width={50}
             height={50}
             layout='fixed'
+            alt='brand-logo'
             background-color='Black'
         ></Image></div>
         <h1>Brand Recognition</h1>
