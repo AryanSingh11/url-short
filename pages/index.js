@@ -33,7 +33,7 @@ export default function Home() {
     fetch(url)
     .then(response => response.json())
     .then( (data)=> {
-      const Data=data.result.full_short_link
+      const Data=(data.result.full_short_link)
       console.log(Data);
       setcurrentShortLink(Data);
 
