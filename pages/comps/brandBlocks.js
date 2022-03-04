@@ -16,7 +16,7 @@ function BrandBlocks() {
             background-color='Black'
         ></Image></div>
         <h1>Brand Recognition</h1>
-        <p className={styles.brandPara}>Boost your brand recognition with each link.Generic links don't mean a thing.Branded links help instill confidence in your content</p>
+        <p className={styles.brandPara}>Boost your brand recognition with each link.Generic links do not mean a thing.Branded links help instill confidence in your content</p>
         </div>
     </div>
   )
