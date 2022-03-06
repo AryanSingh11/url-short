@@ -5,10 +5,11 @@ import { useState } from 'react'
 import BrandBlocks from './comps/brandBlocks'
 import {nanoid} from 'nanoid'
 import Footer from './comps/footer'
-import InputSection from './comps/inputSection'
+// import InputSection from './comps/inputSection'
 import MainDisplay from './comps/mainDisplay'
 import AboveFooter from './comps/aboveFooter'
 import WholeBrandBlocks from './comps/wholeBrandBlocks'
+import AdvancedAnalytics from './comps/advancedAnalytics'
 
 export default function Home() {
 
@@ -96,9 +97,33 @@ export default function Home() {
 
       <MainDisplay/>
 
-      <InputSection/>
 
+{/* This is the input Section that I am not converting into a component becausethe states are defined and index.json
+and if we import export it, error occurs */}
 
+      <div className={styles.inputSection}>
+      <div className={styles.inputDiv}>
+
+          <div className={styles.inputfield}>
+            <input className={styles.inputField}
+                  onChange={updateInputLink}
+                 
+                  type='text'
+                  value={inputLink}
+                  id='inputLink'
+                    placeholder='Shorten a link here'
+            ></input>
+          </div>
+            
+          <button className={styles.shortenButton} 
+                  onClick={shortFunction}
+                  
+          >Shorten it!</button>
+
+      </div>
+      </div>
+
+  {/* Input section ends here */}
       
 
      
@@ -111,17 +136,7 @@ export default function Home() {
                 </div>
       </div>
 
-      <div className={styles.secondPart}>
-
-          <div className={styles.secondRestrictor}>
-              <div className={styles.secondMainText}>
-                  Advanced Statistics
-              <div className={styles.secondPara}>
-              <p>Track how your links are perorming across the Web with our Advanced statistics Dashboard</p>
-              </div>
-              </div>
-          </div>
-      </div>
+     <AdvancedAnalytics/>
 
     </div>
 
