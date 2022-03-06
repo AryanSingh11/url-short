@@ -14,20 +14,16 @@ import AdvancedAnalytics from './comps/advancedAnalytics'
 export default function Home() {
 
 
-  const [inputLink, setinputLink] = useState('');;
+  const [inputLink, setinputLink] = useState('')
   
   const [currentShortLink, setcurrentShortLink] = useState('Short link will appear here')
 
-  const [linkArr, setlinkArr] = useState([]);
-  
-  const [isOpen, setisOpen] = useState(false)
-
-  const [shortenedLink, setshortenedLink] = useState()
+  const [linkArr, setlinkArr] = useState([])
 
   function updateInputLink(event){
     setinputLink(event.target.value)
-
   }
+  
   console.log(inputLink);
   
   
