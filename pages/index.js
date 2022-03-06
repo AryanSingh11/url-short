@@ -4,7 +4,8 @@ import styles from '../styles/Home.module.css'
 import { useState } from 'react'
 import BrandBlocks from './comps/brandBlocks'
 import {nanoid} from 'nanoid'
-
+import Footer from './comps/footer'
+import InputSection from './comps/inputSection'
 
 export default function Home() {
 
@@ -101,27 +102,7 @@ export default function Home() {
              
               />
 
-    <div className={styles.inputSection}>
-      <div className={styles.inputDiv}>
-
-          <div className={styles.inputfield}>
-            <input className={styles.inputField}
-                  onChange={updateInputLink}
-                 
-                  type='text'
-                  value={inputLink}
-                  id='inputLink'
-                    placeholder='Shorten a link here'
-            ></input>
-          </div>
-            
-          <button className={styles.shortenButton} 
-                  onClick={shortFunction}
-                  
-          >Shorten it!</button>
-
-      </div>
-      </div>
+      <InputSection/>
 
 
       
@@ -169,64 +150,7 @@ export default function Home() {
         </div>
       </div>
 
-    <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        
-
-        <div className={styles.footerDiv}>
-
-        <div className={styles.singleFooterDiv}>
-        <div className={styles.shortlyFooterDiv}>
-            <div>
-              <h1>Shortly</h1>
-            </div>
-            <div className={styles.footerIcons}> 
-               <div className={styles.smallIcon}><Image src="/icon-facebook.svg" layout='fixed' width={30} height={30} ></Image></div>
-               <div className={styles.smallIcon}><Image src="/icon-twitter.svg" layout='fixed' width={30} height={30}></Image></div>
-               <div className={styles.smallIcon}><Image src="/icon-pinterest.svg" layout='fixed' width={30} height={30}></Image></div>
-               <div className={styles.smallIcon}><Image src="/icon-instagram.svg" layout='fixed' width={30} height={30}></Image></div>
-            </div>
-          </div>
-          </div>
-          
-          <div className={styles.singleFooterDiv}>
-            <div className={styles.footerDivHeader}>
-              <h3>Features</h3>
-            </div>
-            <div className={styles.footerDivPara}>
-            <p>Link shortening</p>
-            <p>Branded Links</p>
-            <p>Analytics</p>
-            </div>
-          </div>
-
-          <div className={styles.singleFooterDiv}>
-            <div className={styles.footerDivHeader}>
-              <h3>Resourcess</h3>
-            </div>
-            <div className={styles.footerDivPara}>
-            <p>Blog</p>
-            <p>Developers</p>
-            <p>Support</p>
-            </div>
-          </div>
-
-          <div className={styles.singleFooterDiv}>
-            <div className={styles.footerDivHeader}>
-              <h3>Company</h3>
-            </div>
-            <div className={styles.footerDivPara}>
-            <p>About</p>
-            <p>Our team</p>
-            <p>Careers</p>
-            <p>Contact</p>
-            </div>
-          </div>
-
-
-          </div>
-        </div>
-      </footer>
+     <Footer/>
 
     </div>
   )
