@@ -6,6 +6,9 @@ import BrandBlocks from './comps/brandBlocks'
 import {nanoid} from 'nanoid'
 import Footer from './comps/footer'
 import InputSection from './comps/inputSection'
+import MainDisplay from './comps/mainDisplay'
+import AboveFooter from './comps/aboveFooter'
+import WholeBrandBlocks from './comps/wholeBrandBlocks'
 
 export default function Home() {
 
@@ -91,16 +94,7 @@ export default function Home() {
       </nav>
       </div>
 
-      <div className={styles.mainText}>MORE THAN JUST SHORTER LINKS</div>
-
-      <Image 
-              src="/people working.svg" 
-              layout='responsive'
-              alt="people-working Logo" 
-              width={350}
-              height={150}
-             
-              />
+      <MainDisplay/>
 
       <InputSection/>
 
@@ -131,24 +125,9 @@ export default function Home() {
 
     </div>
 
-    <div className={styles.brandMainDiv}>
-      <BrandBlocks/>
-      <BrandBlocks/>
-      <BrandBlocks/>
-    
-        
-        </div>
+    <WholeBrandBlocks/>
 
-      <div>
-      <div className={styles.boostDiv}>
-          <div>
-            <h1 className={styles.h1BoostText}>Boost your links today</h1>
-          </div>
-          <div>
-            <button className={styles.boostButton}>Get Started</button>
-          </div>
-        </div>
-      </div>
+     <AboveFooter/>
 
      <Footer/>
 
