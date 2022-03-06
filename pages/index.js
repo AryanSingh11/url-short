@@ -2,14 +2,15 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState } from 'react'
-import BrandBlocks from './comps/brandBlocks'
 import {nanoid} from 'nanoid'
+
 import Footer from './comps/footer'
 // import InputSection from './comps/inputSection'
 import MainDisplay from './comps/mainDisplay'
 import AboveFooter from './comps/aboveFooter'
 import WholeBrandBlocks from './comps/wholeBrandBlocks'
 import AdvancedAnalytics from './comps/advancedAnalytics'
+import NavBar from './comps/navComps/navBar'
 
 export default function Home() {
 
@@ -23,7 +24,7 @@ export default function Home() {
   function updateInputLink(event){
     setinputLink(event.target.value)
   }
-  
+
   console.log(inputLink);
   
   
@@ -64,32 +65,7 @@ export default function Home() {
         <link rel="icon" href="/vercel.svg" />
       </Head>
 
-      <div className={styles.navWrapper}>
-      <nav >
-        <div className={styles.containerNav}>
-        <div><Image
-            src="/logo.svg"
-            width={170}
-            height={50}
-            alt='logo'
-            layout='intrinsic'
-        ></Image></div>
-        <div className={styles.menu}>
-          
-            <a href=''>Features </a>
-            <a href=''>Pricing </a>
-            <a href=''>Resources</a>
-        </div>
-        <div>
-            <button  className={styles.hamburger}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        </div>
-      </nav>
-      </div>
+      <NavBar/>
 
       <MainDisplay/>
 
